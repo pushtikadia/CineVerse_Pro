@@ -1,4 +1,4 @@
-# CINEVERSE PRO 
+# 🌌 CINEVERSE PRO 
 
 ![Backend](https://img.shields.io/badge/Backend-Python_Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![Security](https://img.shields.io/badge/Security-Java_SE-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
