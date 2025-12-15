@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVerse Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='theme.css') }}">
+</head>
+<body>
+
+    <nav>
+        <a href="/" style="text-decoration:none;">
+            <div class="brand">CineVerse <span class="pro">PRO</span></div>
+        </a>
+        <div class="nav-links">
+            <a href="/" class="nav-item">Home</a>
+            <a href="/favorites" class="nav-item">Favorites</a>
+            <div class="session">ID: {{ token }}</div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <p>&copy; 2024 CineVerse AI. Powered by Python & Java.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='logic.js') }}"></script>
+</body>
+</html>

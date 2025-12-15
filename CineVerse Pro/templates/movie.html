@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="movie-hero" style="background-image: url('{{ movie.backdrop }}');">
+    <div class="movie-overlay">
+        <div class="movie-poster-container">
+            <img src="{{ movie.img }}" class="detail-poster" alt="{{ movie.title }}">
+        </div>
+        <div class="movie-details">
+            <h1 class="movie-title">{{ movie.title }}</h1>
+            
+            <div class="meta-tags">
+                <span class="tag">{{ movie.genre }}</span>
+                <span class="tag">{{ movie.year }}</span>
+                <span class="tag">{{ movie.duration }}</span>
+                <span class="rating-badge">★ {{ movie.rating }}</span>
+            </div>
+
+            <p class="movie-desc">{{ movie.desc }}</p>
+            
+            <h3>Cast</h3>
+            <div class="cast-list">
+                {% if movie.cast %}
+                    {% for actor in movie.cast %}
+                    <span class="actor-bubble">{{ actor }}</span>
+                    {% endfor %}
+                {% else %}
+                    <span style="color:#777;">Cast info unavailable</span>
+                {% endif %}
+            </div>
+
+            <div class="action-buttons">
+                <button 
+                    class="btn-primary"
+                    data-id="{{ movie.id }}" 
+                    data-title="{{ movie.title }}"
+                    onclick="addToFavorites(parseInt(this.dataset.id), this.dataset.title)">
+                    Add to Favorites
+                </button>
+                
+                <button class="btn-secondary">Watch Trailer</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

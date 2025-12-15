@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap');
+
+:root { --primary: #E50914; --dark: #141414; }
+body { background-color: var(--dark); color: white; font-family: 'Montserrat', sans-serif; margin: 0; }
+
+/* NAV */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(0,0,0,0.9); position: fixed; width: 90%; left: 5%; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+.brand { font-size: 28px; font-weight: 900; color: var(--primary); }
+.pro { background: white; color: black; padding: 2px 6px; font-size: 11px; border-radius: 4px; vertical-align: middle; }
+.nav-links { display: flex; gap: 20px; align-items: center; }
+.nav-item { color: #ddd; text-decoration: none; font-weight: 500; transition: 0.3s; }
+.nav-item:hover { color: var(--primary); }
+.session { font-family: monospace; color: #00ff00; font-size: 12px; border: 1px solid #00ff00; padding: 5px 10px; border-radius: 20px; }
+
+/* HOME GRID */
+main { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 30px; padding: 50px; }
+.card { background: #1f1f1f; border-radius: 12px; overflow: hidden; position: relative; cursor: pointer; transition: 0.4s; opacity: 0; animation: fadeUp 0.6s forwards; }
+.card:hover { transform: translateY(-10px) scale(1.03); z-index: 50; box-shadow: 0 20px 50px rgba(0,0,0,0.8); }
+.card img { width: 100%; height: 330px; object-fit: cover; }
+.info { padding: 15px; position: absolute; bottom: 0; width: 100%; background: linear-gradient(to top, black, transparent); }
+.rating { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #46d369; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+
+/* HERO & DETAILS */
+header { 
+    height: 80vh; 
+    /* FALLBACK BACKGROUND */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url('https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/f6d7434e-d6de-4185-a6d4-c77a2d08737b/US-en-20220502-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+    background-size: cover; 
+    background-position: center; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+header h1 { font-size: 60px; font-weight: 800; margin: 0; text-shadow: 0 10px 30px rgba(0,0,0,0.8); }
+.search-bar { margin-top: 30px; background: rgba(255,255,255,0.1); padding: 5px; border-radius: 50px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); }
+input { background: transparent; border: none; color: white; padding: 15px 20px; width: 300px; outline: none; }
+button { background: var(--primary); color: white; border: none; padding: 15px 30px; border-radius: 40px; font-weight: bold; cursor: pointer; }
+
+/* MOVIE DETAILS PAGE */
+.movie-hero { height: 100vh; background-size: cover; background-position: center; position: relative; }
+.movie-overlay { background: linear-gradient(to right, #141414 40%, transparent); height: 100%; display: flex; align-items: center; padding: 0 100px; gap: 50px; }
+.detail-poster { height: 500px; border-radius: 15px; box-shadow: 0 20px 60px rgba(0,0,0,0.8); }
+.movie-details { max-width: 600px; }
+.movie-title { font-size: 60px; margin: 0 0 20px 0; font-weight: 900; line-height: 1; }
+.meta-tags { display: flex; gap: 15px; margin-bottom: 20px; }
+.tag { border: 1px solid #555; padding: 5px 15px; border-radius: 20px; font-size: 12px; }
+.rating-badge { color: #46d369; font-weight: bold; }
+.movie-desc { font-size: 18px; line-height: 1.6; color: #ccc; }
+.cast-list { display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap; }
+.actor-bubble { background: #333; padding: 5px 15px; border-radius: 15px; font-size: 12px; }
+.btn-primary { background: var(--primary); color: white; padding: 15px 30px; border-radius: 5px; border: none; font-weight: bold; cursor: pointer; font-size: 16px; margin-right: 10px; }
+.btn-secondary { background: rgba(255,255,255,0.2); color: white; padding: 15px 30px; border-radius: 5px; border: none; font-weight: bold; cursor: pointer; font-size: 16px; }
+
+/* FAVORITES PAGE */
+.page-container { padding-top: 100px; min-height: 80vh; }
+.page-title { text-align: center; font-size: 40px; margin-bottom: 10px; }
+footer { text-align: center; padding: 50px; color: #555; font-size: 12px; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
