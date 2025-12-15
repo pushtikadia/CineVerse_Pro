@@ -66,12 +66,6 @@ The interface uses Vanilla JavaScript with `fetch` API for non-blocking updates.
 
 ---
 
-## 📸 Screenshots
-
-*(Add screenshots of your Dashboard and Movie Details page here)*
-
----
-
 ## 📄 License
 
 This project is open-source and available under the [MIT License](LICENSE).
