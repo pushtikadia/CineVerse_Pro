@@ -74,3 +74,7 @@ This project is open-source and available under the [MIT License](LICENSE).
 <p align="center">
   <b>CineVerse Pro</b> • Created by <a href="https://github.com/pushtikadia"><b>Pushti Kadia</b></a>
 </p>
+
+
+
+
